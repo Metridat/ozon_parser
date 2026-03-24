@@ -1,30 +1,13 @@
-import requests
-import time
+import asyncio
+from playwright.async_api import async_playwright
 
-session = requests.Session()
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False)
+        page = await browser.new_page()
+        await page.goto("https://www.ozon.ru/search/?text=термос")
+        await page.wait_for_timeout(5000)
+        print("Заголовок страницы:", await page.title())
+        await browser.close()
 
-headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-}
-
-session.get("https://www.ozon.ru/", headers=headers)
-
-time.sleep(2)
-
-url = "https://www.ozon.ru/api/entrypoint-api.bx/page/json/v2"
-
-params = {
-    "url": "/search/?text=нож туристический&page=1"
-}
-
-headers.update({
-    "accept": "application/json",
-    "referer": "https://www.ozon.ru/",
-    "x-o3-app-name": "dweb_client",
-})
-
-response = session.get(url, params=params, headers=headers)
-
-print(response.status_code)
-print(response.text[:500])
+asyncio.run(main())
