@@ -75,3 +75,8 @@ python parser.py "термос" "1758986739"
 3 запроса с паузой 30 секунд:
 
 python parser.py --stability-test
+
+---
+
+## Ссылка на скринкаст
+https://drive.google.com/file/d/1eXDoXm3DefU1BGNm5ra3cu3hZRFBhojQ/view?usp=sharing
