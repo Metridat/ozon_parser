@@ -7,6 +7,12 @@ venv/
 .env.local
 *.log
 ozon_response.json
+results.json
+run_1.json
+run_2.json
+run_3.json
+
+
 # IDE
 .vscode/
 .idea/
