@@ -1,0 +1,26 @@
+[
+  {
+    "query": "термос",
+    "sku": "1758986739",
+    "position": 3,
+    "page": 1,
+    "total_checked": 24,
+    "timestamp": "2026-03-24T14:53:49"
+  },
+  {
+    "query": "наушники bluetooth",
+    "sku": "1288068946",
+    "position": "not_found",
+    "page": 1,
+    "total_checked": 12,
+    "timestamp": "2026-03-24T14:54:54"
+  },
+  {
+    "query": "рюкзак туристический",
+    "sku": "548925834",
+    "position": "not_found",
+    "page": 1,
+    "total_checked": 24,
+    "timestamp": "2026-03-24T14:55:41"
+  }
+]
